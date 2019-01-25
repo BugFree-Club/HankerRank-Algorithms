@@ -1,0 +1,29 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the staircase function below.
+def staircase(n):
+    count=1
+    while count<=n:
+        key1,key2=1,1
+        while key1<=n-count:
+            key1+=1
+            print(" ",end="")
+        while key2<=count:
+            key2+=1
+            print("#",end="")
+        print("")
+        count+=1
+
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+
+    staircase(n)
