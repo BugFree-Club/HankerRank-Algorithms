@@ -1,0 +1,36 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+# Complete the plusMinus function below.
+def plusMinus(arr):
+    sum1=0
+    sum2=0
+    sum3=0
+    for i in arr:
+        if i>0:
+            sum1=sum1+1
+        if i<0:
+            sum2=sum2+1
+        if i==0:
+            sum3=sum3+1
+    sum1=round(sum1/len(arr),6)
+    sum2=round(sum2/len(arr),6)
+    sum3=round(sum3/len(arr),6)
+    print(sum1)
+    print(sum2)
+    print(sum3)
+    return
+
+
+
+if __name__ == '__main__':
+    n = int(input())
+
+    arr = list(map(int, input().rstrip().split()))
+
+    plusMinus(arr)
