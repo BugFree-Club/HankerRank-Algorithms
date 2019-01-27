@@ -3,28 +3,15 @@
 import os
 import sys
 
-#
-# Complete the gradingStudents function below.
-#
-def gradingStudents(grades):
-    #
-    # Write your code here.
-    #
+n=int(input())
 
-if __name__ == '__main__':
-    f = open(os.environ['OUTPUT_PATH'], 'w')
+for i in range(n):
 
-    n = int(input())
+    grade = int(input())
 
-    grades = []
+    if grade >= 38 and grade % 5 >= 3:
 
-    for _ in range(n):
-        grades_item = int(input())
-        grades.append(grades_item)
+        grade = (grade + 5) // 5 * 5
 
-    result = gradingStudents(grades)
+    print(grade)
 
-    f.write('\n'.join(map(str, result)))
-    f.write('\n')
-
-    f.close()
