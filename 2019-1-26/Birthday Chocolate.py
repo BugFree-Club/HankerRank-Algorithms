@@ -8,6 +8,21 @@ import sys
 
 # Complete the birthday function below.
 def birthday(s, d, m):
+    a=0
+    
+    for i in range(n+1-m) :
+        
+        k=0#m个巧克力块的和
+        
+        for j in range(i,i+m) :
+            
+            k+=s[j]
+            
+        if k==d :
+            
+            a+=1
+            
+    return a
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
