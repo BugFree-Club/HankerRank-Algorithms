@@ -6,16 +6,12 @@ import random
 import re
 import sys
 
-# Complete the dayOfProgrammer function below.
-def dayOfProgrammer(year):
+year = int(input().strip())
 
-if __name__ == '__main__':
-    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+if year%400==0 or ( year%4 == 0 and (year%100) != 0 ) :
 
-    year = int(input().strip())
+    print ("%02s.09.%d" % ("12",year) )
 
-    result = dayOfProgrammer(year)
+else :
 
-    fptr.write(result + '\n')
-
-    fptr.close()
+    print ("%02s.09.%d" % ("13",year) )
