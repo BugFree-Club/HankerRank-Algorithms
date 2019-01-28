@@ -8,6 +8,17 @@ import sys
 
 # Complete the divisibleSumPairs function below.
 def divisibleSumPairs(n, k, ar):
+    a=0
+
+    for i in range(n-1) :
+
+        for j in range(i+1,n) :
+
+            if (ar[i] + ar[j])%k==0 :
+
+                a+=1
+    
+    return a
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
